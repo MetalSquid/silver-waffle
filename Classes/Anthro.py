@@ -3,6 +3,8 @@ class Data:
     def __repr__(self):
         print("Patient anthropometric info. This class will add pertinent info that you can then use to call estimated needs")
     
+    # eventually add in code to force sex to be in lowercase to simplify code later on. 
+    
     def __init__(self, height, weight, age, sex, temp= 36.7, rate=12, breath_vol=450):
         self.height = height
         self.weight = weight

@@ -20,8 +20,8 @@ class ComplexCalc(Data):
             nrg = self.Mbase * self.af
         else:
             nrg = self.Fbase * self.af
-        low = round(nrg * 1.1)
-        high = round(nrg * 0.9)
+        low = round(nrg * 0.9)
+        high = round(nrg * 1.1)
         print("""
               Per MSJ with AF of {}, and a 10% +/- range,
               patient's estimated energy needs are {} to {} kcal/day""".format(self.af, low, high))
@@ -32,7 +32,7 @@ class ComplexCalc(Data):
         else:
             nrg = self.Fbase * 0.96 + self.temp * 167 + self.tidal * 31 - 6212
         low = round(nrg * 0.7)
-        high = round(nrg * 1.0)
+        high = round(nrg * 1)
         print("""
               Per Penn State equation with temp of {}, tidal volume of {}, and a range of 70-100%,
               patient's estimated energy needs are {} to {} kcal/day""".format(self.temp, self.tidal, low, high))
@@ -48,5 +48,6 @@ class ComplexCalc(Data):
               Per the modified Penn State equation, assuming patients over 65 years old and with a bmi above 30;
               with temp of {} C, tidal volume of {} L/min, and a range of 70-100%,
               patient's estimated energy needs are {} to {} kcal/day""".format(self.temp, self.tidal, low, high))
+
 
 
